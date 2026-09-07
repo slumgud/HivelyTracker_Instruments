@@ -3,6 +3,13 @@
 This is a static GitHub Pages frontend. It has no SQLite or SlumTracker
 runtime dependency.
 
+## Open the web app
+
+**[Open the AHX Instrument Archive](https://slumgud.github.io/HivelyTracker_Instruments/)**
+
+The live app lets you search the instrument catalogue, inspect original module
+sources, preview voices, and keep local curation notes in the browser.
+
 Build the read model and copy the portable preset bank before serving:
 
 ```powershell
