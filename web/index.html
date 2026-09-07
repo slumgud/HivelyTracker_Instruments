@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090b12"><title>AHX Instrument Archive</title>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="mark">AHX</span><div><strong>Instrument Archive</strong><small>HivelyTracker sound catalog</small></div></div>
+      <div class="top-actions"><button id="exportBtn" class="ghost">Export curation</button><a href="https://github.com/slumgud/HivelyTracker_Instruments" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+    </header>
+    <section class="hero"><div><p class="eyebrow">CURATE THE SOUND</p><h1>Find the voice<br><em>behind the module.</em></h1><p class="lede">Browse deduplicated AHX instruments, trace their original modules, and keep your own curation notes.</p></div><div class="signal"><span></span><span></span><span></span><span></span><b>THXI / v1</b></div></section>
+    <section class="stats" id="stats"></section>
+    <section class="workspace">
+      <aside class="filters">
+        <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search names, modules, tags…" autocomplete="off"></label>
+        <div class="filter-row"><label>Type<select id="typeFilter"><option value="">All types</option></select></label><label>Sort<select id="sort"><option value="name">Name</option><option value="sources">Sources</option><option value="id">Catalog order</option></select></label></div>
+        <label class="check"><input id="curatedOnly" type="checkbox"> Show curated only</label>
+        <div class="filter-note"><span class="dot"></span><span><b>Local curation</b><br>Notes and tags stay in this browser until exported.</span></div>
+      </aside>
+      <section class="results"><div class="result-head"><div><span class="eyebrow">LIBRARY</span><h2 id="resultTitle">All instruments</h2></div><span id="resultCount" class="count"></span></div><div id="cards" class="cards"></div><div id="empty" class="empty" hidden>No instruments match these filters.</div></section>
+      <aside id="detail" class="detail" aria-live="polite"><div class="detail-empty"><span class="big-mark">AHX</span><p>Select an instrument to inspect its sources and preview it.</p></div></aside>
+    </section>
+    <footer><span>Archive data is generated from SQLite.</span><span id="loadState">Loading catalog…</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
